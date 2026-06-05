@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blogger Offers Affiliate</title>
+
+<style>
+body{
+background:#0f172a;
+font-family:Arial;
+color:white;
+padding:20px;
+max-width:600px;
+margin:auto;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#ec4899;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+}
+
+#result{
+margin-top:20px;
+background:#111827;
+padding:15px;
+border-radius:10px;
+word-break:break-all;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🔥 Blogger Offers</h1>
+
+<input id="amazonLink" placeholder="حطي رابط أمازون هنا">
+
+<button onclick="createLink()">
+إنشاء رابط أفلييت
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function createLink(){
+
+let link=document.getElementById('amazonLink').value;
+
+if(!link){
+alert('ضعي رابط أمازون');
+return;
+}
+
+if(link.includes('?')){
+link += '&tag=bloggeroffe05-21';
+}else{
+link += '?tag=bloggeroffe05-21';
+}
+
+document.getElementById('result').innerHTML=link;
+
+}
+
+</script>
+
+</body>
+</html>
